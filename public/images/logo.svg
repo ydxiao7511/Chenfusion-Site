@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top Needles -->
+  <path d="M256 160V104" stroke="#B38B3F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M180 180L130 130" stroke="#B38B3F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M332 180L382 130" stroke="#B38B3F" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- Sun Arc -->
+  <path d="M184 240C184 200.235 216.235 168 256 168C295.765 168 328 200.235 328 240" stroke="#B38B3F" stroke-width="32" stroke-linecap="round"/>
+  
+  <!-- Middle Hand/Wave Arc -->
+  <path d="M128 340C128 340 180 260 256 260C332 260 384 340 384 340" stroke="#B38B3F" stroke-width="28" stroke-linecap="round"/>
+  
+  <!-- Bottom Wave -->
+  <path d="M20 400C100 320 200 480 300 400C400 320 480 440 500 420" stroke="#B38B3F" stroke-width="20" stroke-linecap="round"/>
+</svg>

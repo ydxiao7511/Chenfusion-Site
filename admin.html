@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChenFusion | Admin OS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./admin-styles.css">
+    <style>
+        /* Extra Stylistic Effects for a Premium Look */
+        body { margin: 0; padding: 0; background: #0F1113; color: #FFF; }
+        .admin-sidebar { background: rgba(26, 29, 33, 0.95); backdrop-filter: blur(10px); }
+        .kpi-card { background: rgba(26, 29, 33, 0.6); border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease; }
+        .kpi-card:hover { transform: translateY(-5px); border-color: var(--color-primary); }
+        .admin-viewport { animation: fadeIn 0.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Fixed Logo Size */
+        .admin-logo img { width: 32px !important; height: auto !important; filter: invert(91%) sepia(94%) saturate(5451%) hue-rotate(3deg) brightness(108%) contrast(100%); margin-right: 12px; }
+        .admin-logo { padding: 2rem; display: flex; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .admin-logo span { font-size: 0.8rem; font-weight: 800; color: #FFF; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <img src="/images/logo.svg" alt="Admin Logo">
+                <span>ADMIN OS</span>
+            </div>
+            <nav class="admin-nav" id="admin-tabs-nav">
+                <button class="active" data-tab="dashboard"><img src="https://img.icons8.com/ios-filled/20/999999/dashboard.png"> Dashboard</button>
+                <button data-tab="calendar"><img src="https://img.icons8.com/ios-filled/20/999999/calendar.png"> Schedule</button>
+                <button data-tab="clients"><img src="https://img.icons8.com/ios-filled/20/999999/user-group-man-man.png"> Client Dossier</button>
+                <button data-tab="finance"><img src="https://img.icons8.com/ios-filled/20/999999/bank-cards.png"> Finance</button>
+                <button data-tab="settings"><img src="https://img.icons8.com/ios-filled/20/999999/settings.png"> Settings</button>
+            </nav>
+            <div class="admin-user">
+                <div class="user-avatar">LC</div>
+                <div class="user-info">
+                    <p class="user-name">Lin Chen</p>
+                    <p class="user-role">Super Admin</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="admin-workspace">
+            <header class="admin-header">
+                <div class="header-left">
+                    <div class="global-search">
+                        <img src="https://img.icons8.com/ios/18/999999/search.png">
+                        <input type="text" placeholder="Quick client lookup (Alt+K)...">
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="admin-badge">SYSTEM STATUS: OPTIMAL</div>
+                    <a href="index.html" class="admin-exit-btn" style="text-decoration: none;">EXIT PORTAL</a>
+                </div>
+            </header>
+
+            <div class="admin-viewport">
+                <!-- Dashboard / Revenue KPIs -->
+                <div class="admin-tab-panel active" id="tab-dashboard">
+                    <div class="kpi-row">
+                        <div class="kpi-card">
+                            <label>TODAY'S REVENUE</label>
+                            <div class="kpi-value">$2,840.00</div>
+                            <div class="kpi-trend up">+14.2% vs prev. day</div>
+                        </div>
+                        <div class="kpi-card">
+                            <label>OCCUPANCY RATE</label>
+                            <div class="kpi-value">92%</div>
+                            <div class="kpi-progress-bar"><div class="bar-fill" style="width: 92%"></div></div>
+                        </div>
+                        <div class="kpi-card">
+                            <label>NEW DOSSIERS</label>
+                            <div class="kpi-value">8</div>
+                            <div class="kpi-trend">+3 since 9:00 AM</div>
+                        </div>
+                        <div class="kpi-card">
+                            <label>PENDING SOAP NOTES</label>
+                            <div class="kpi-value" style="color: #FF5252;">4</div>
+                            <div class="kpi-action" style="font-size: 0.7rem; color: #A0A0A0; margin-top: 0.5rem; cursor: pointer;">View Requests →</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="admin-card-dense recent-ops">
+                            <div class="card-title-dense">RECENT CLINICAL ACTIVITY</div>
+                            <div class="activity-log-dense">
+                                <div class="log-item-dense">
+                                    <span class="time-stamp">14:22</span>
+                                    <span class="log-desc">SOAP Note filed for <strong>David Chen</strong> (Lin Chen)</span>
+                                </div>
+                                <div class="log-item-dense">
+                                    <span class="time-stamp">13:45</span>
+                                    <span class="log-desc">Intake PDF uploaded for <strong>Sarah Mitchell</strong></span>
+                                </div>
+                                <div class="log-item-dense">
+                                    <span class="time-stamp">12:10</span>
+                                    <span class="log-desc">Rescheduled: <strong>Mark T.</strong> → 16:30 (Buffer: 15m)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="admin-card-dense revenue-viz">
+                            <div class="card-title-dense">HOURLY UTILIZATION</div>
+                            <div class="mini-bar-chart">
+                                <div class="chart-bar-wrap"><div class="bar" style="height: 40%"></div></div>
+                                <div class="chart-bar-wrap"><div class="bar" style="height: 60%"></div></div>
+                                <div class="chart-bar-wrap"><div class="bar" style="height: 90%"></div></div>
+                                <div class="chart-bar-wrap"><div class="bar" style="height: 100%"></div></div>
+                                <div class="chart-bar-wrap"><div class="bar" style="height: 70%"></div></div>
+                                <div class="chart-bar-wrap"><div class="bar" style="height: 50%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi-Therapist Calendar -->
+                <div class="admin-tab-panel" id="tab-calendar">
+                    <div class="calendar-header-dense">
+                        <div class="date-navigator">MAY 02, 2026 - DAILY VIEW</div>
+                    </div>
+                    <div class="multi-timeline">
+                        <div class="timeline-column time-axis">
+                            <div>09:00</div><div>10:00</div><div>11:00</div><div>12:00</div><div>13:00</div><div>14:00</div><div>15:00</div><div>16:00</div>
+                        </div>
+                        <div class="timeline-column rmt-col">
+                            <div class="col-label">LIN CHEN (RMT)</div>
+                            <div class="appt-block" style="top: 10%; height: 60px;">DAVID CHEN [Swedish]</div>
+                            <div class="buffer-block" style="top: 25%; height: 20px;"></div>
+                            <div class="appt-block active" style="top: 35%; height: 90px;">SARAH M. [Deep Tissue]</div>
+                        </div>
+                        <div class="timeline-column rmt-col">
+                            <div class="col-label">JENNIFER (RMT)</div>
+                            <div class="appt-block" style="top: 40%; height: 60px;">ELENA R. [Hot Stone]</div>
+                            <div class="appt-block warning" style="top: 60%; height: 60px;">MARK T. [Thai]</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client Dossier -->
+                <div class="admin-tab-panel" id="tab-clients">
+                    <div class="crm-layout">
+                        <div class="crm-list">
+                            <div class="list-search-wrap">
+                                <input type="text" placeholder="Filter Dossiers...">
+                            </div>
+                            <div class="crm-items">
+                                <div class="crm-item active">
+                                    <p class="crm-name">David Chen</p>
+                                    <p class="crm-meta">RMT Member since 2024</p>
+                                </div>
+                                <div class="crm-item">
+                                    <p class="crm-name">Sarah Mitchell</p>
+                                    <p class="crm-meta">New Client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crm-detail">
+                            <div class="detail-header-dense">
+                                <h3>CLIENT PROFILE: DAVID CHEN</h3>
+                            </div>
+                            <div class="soap-section">
+                                <div class="soap-form-dense">
+                                    <div class="soap-row">
+                                        <label>SUBJECTIVE</label>
+                                        <textarea placeholder="Client reports lower back tension..."></textarea>
+                                    </div>
+                                    <div class="soap-row">
+                                        <label>OBJECTIVE</label>
+                                        <textarea placeholder="Hypertonicity observed in L2-L4..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finance Module -->
+                <div class="admin-tab-panel" id="tab-finance">
+                    <div class="finance-grid">
+                        <div class="finance-section">
+                            <div class="finance-header">
+                                <h3>REVENUE & PAYOUT LOGS</h3>
+                            </div>
+                            <div class="table-toolbar">
+                                <input type="text" id="revenue-search" placeholder="Search transactions (Client, Therapist)...">
+                            </div>
+                            <div style="max-height: 400px; overflow-y: auto;">
+                                <table class="density-table" id="revenue-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Client</th>
+                                            <th>Therapist</th>
+                                            <th>Service</th>
+                                            <th class="col-right">Fee</th>
+                                            <th class="col-right">Tip</th>
+                                            <th class="col-right">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="revenue-tbody">
+                                        <!-- Populated via JS -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="finance-sidebar">
+                            <div class="finance-section payroll-calculator" style="margin-bottom: 1.5rem;">
+                                <div class="finance-header">
+                                    <h3>PAYROLL CALCULATOR</h3>
+                                </div>
+                                <div class="form-group-dense">
+                                    <label>Therapist</label>
+                                    <select id="payroll-therapist">
+                                        <option value="Lin Chen">Lin Chen</option>
+                                        <option value="Jennifer">Jennifer</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-dense">
+                                    <label>Commission %</label>
+                                    <input type="number" id="payroll-commission" value="60" min="0" max="100">
+                                </div>
+                                <div class="payroll-result">
+                                    <label>WEEKLY EARNINGS</label>
+                                    <div class="payroll-total" id="payroll-total-display">$0.00</div>
+                                </div>
+                            </div>
+
+                            <div class="finance-section">
+                                <div class="finance-header">
+                                    <h3>PACKAGES & CREDITS</h3>
+                                </div>
+                                <table class="density-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Client</th>
+                                            <th>Package</th>
+                                            <th class="col-right">Left</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="packages-tbody">
+                                        <!-- Populated via JS -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Module -->
+                <div class="admin-tab-panel" id="tab-settings">
+                    <div class="finance-grid">
+                        <div class="finance-section settings-card-dense">
+                            <div class="finance-header">
+                                <h3>BUSINESS RULES</h3>
+                            </div>
+                            <div class="form-group-dense">
+                                <label>Buffer Time (Between appointments)</label>
+                                <select>
+                                    <option>0 minutes</option>
+                                    <option>5 minutes</option>
+                                    <option>10 minutes</option>
+                                    <option selected>15 minutes</option>
+                                    <option>30 minutes</option>
+                                </select>
+                            </div>
+                            <div class="form-group-dense">
+                                <label>Booking Lead Time</label>
+                                <select>
+                                    <option>1 hour</option>
+                                    <option selected>2 hours</option>
+                                    <option>12 hours</option>
+                                    <option>24 hours</option>
+                                </select>
+                            </div>
+                            <div class="form-group-dense">
+                                <label>Therapist Revenue Visibility (Self only vs Global)</label>
+                                <label class="toggle-switch">
+                                  <input type="checkbox">
+                                  <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="finance-section settings-card-dense">
+                            <div class="finance-header">
+                                <h3>MESSAGING CENTER</h3>
+                            </div>
+                            <div class="form-group-dense" style="flex-direction: column; align-items: flex-start;">
+                                <label style="margin-bottom: 0.5rem;">Automated SMS Reminder Template</label>
+                                <textarea class="textarea-code">Hi {{client.first_name}}, a reminder of your appt with {{therapist.name}} at ChenFusion on {{appt.date}} at {{appt.time}}. Reply C to confirm.</textarea>
+                            </div>
+                            <div class="form-group-dense" style="flex-direction: column; align-items: flex-start; border-bottom: none;">
+                                <label style="margin-bottom: 0.5rem;">Automated Email Template</label>
+                                <textarea class="textarea-code"><div style="font-family: sans-serif;">
+  <h2>Booking Confirmation</h2>
+  <p>Dear {{client.first_name}},</p>
+  <p>Your appointment is confirmed for {{appt.date}}.</p>
+</div></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Simple Admin Navigation Logic
+        const tabs = document.querySelectorAll('#admin-tabs-nav button');
+        const panels = document.querySelectorAll('.admin-tab-panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+                
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                panels.forEach(p => {
+                    p.classList.remove('active');
+                    if (p.id === `tab-${target}`) {
+                        p.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Finance Data & Logic
+        const mockTransactions = [
+            { id: 'TX-1001', date: '2026-05-02', client: 'David Chen', therapist: 'Lin Chen', service: 'Swedish 60m', fee: 120, tip: 20 },
+            { id: 'TX-1002', date: '2026-05-02', client: 'Sarah M.', therapist: 'Lin Chen', service: 'Deep Tissue 90m', fee: 160, tip: 30 },
+            { id: 'TX-1003', date: '2026-05-02', client: 'Elena R.', therapist: 'Jennifer', service: 'Hot Stone 60m', fee: 140, tip: 25 },
+            { id: 'TX-1004', date: '2026-05-01', client: 'Mark T.', therapist: 'Jennifer', service: 'Thai 90m', fee: 170, tip: 0 },
+            { id: 'TX-1005', date: '2026-05-01', client: 'Alex P.', therapist: 'Lin Chen', service: 'Swedish 60m', fee: 120, tip: 25 }
+        ];
+
+        const mockPackages = [
+            { client: 'David Chen', type: '10-Pack 60m', remaining: 4 },
+            { client: 'Sarah M.', type: '5-Pack 90m', remaining: 5 },
+            { client: 'Mark T.', type: '5-Pack 60m', remaining: 1 }
+        ];
+
+        function formatCurrency(num) {
+            return '$' + num.toFixed(2);
+        }
+
+        function renderRevenueTable(data) {
+            const tbody = document.getElementById('revenue-tbody');
+            if(!tbody) return;
+            tbody.innerHTML = '';
+            data.forEach(tx => {
+                const total = tx.fee + tx.tip;
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${tx.date}</td>
+                    <td><strong>${tx.client}</strong></td>
+                    <td>${tx.therapist}</td>
+                    <td><span class="badge outline">${tx.service}</span></td>
+                    <td class="col-right">${formatCurrency(tx.fee)}</td>
+                    <td class="col-right">${formatCurrency(tx.tip)}</td>
+                    <td class="col-right" style="color:#FFF5E1; font-weight:700;">${formatCurrency(total)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function renderPackagesTable() {
+            const tbody = document.getElementById('packages-tbody');
+            if(!tbody) return;
+            tbody.innerHTML = '';
+            mockPackages.forEach(pkg => {
+                const tr = document.createElement('tr');
+                let colorClass = pkg.remaining <= 1 ? 'style="color:#FF5252;font-weight:700;"' : 'style="color:#4CAF50;font-weight:700;"';
+                tr.innerHTML = `
+                    <td><strong>${pkg.client}</strong></td>
+                    <td>${pkg.type}</td>
+                    <td class="col-right" ${colorClass}>${pkg.remaining}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function updatePayroll() {
+            const therapist = document.getElementById('payroll-therapist').value;
+            const commRate = parseFloat(document.getElementById('payroll-commission').value) / 100;
+            
+            let totalFee = 0;
+            let totalTip = 0;
+            
+            mockTransactions.forEach(tx => {
+                if(tx.therapist === therapist) {
+                    totalFee += tx.fee;
+                    totalTip += tx.tip;
+                }
+            });
+            
+            const earnings = (totalFee * commRate) + totalTip;
+            const display = document.getElementById('payroll-total-display');
+            if(display) display.innerText = formatCurrency(earnings);
+        }
+
+        // Initialize Finance functionality when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            renderRevenueTable(mockTransactions);
+            renderPackagesTable();
+            updatePayroll();
+
+            const searchInput = document.getElementById('revenue-search');
+            if(searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase();
+                    const filtered = mockTransactions.filter(tx => 
+                        tx.client.toLowerCase().includes(term) || 
+                        tx.therapist.toLowerCase().includes(term) ||
+                        tx.service.toLowerCase().includes(term)
+                    );
+                    renderRevenueTable(filtered);
+                });
+            }
+
+            document.getElementById('payroll-therapist')?.addEventListener('change', updatePayroll);
+            document.getElementById('payroll-commission')?.addEventListener('input', updatePayroll);
+        });
+    </script>
+</body>
+</html>

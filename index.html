@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChenFusion Massage Therapy | Feel Better, Live Better</title>
+    <meta name="description" content="Premium RMT-licensed massage therapy in Toronto. Specializing in Chinese Tui Na, Deep Tissue, and Swedish massage.">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="/images/logo.svg" alt="ChenFusion Logo" class="logo-icon">
+                <div>
+                    <h1 class="logo-text">ChenFusion</h1>
+                    <p class="logo-subtext">Massage</p>
+                </div>
+            </div>
+            <nav class="desktop-nav">
+                <a href="#services" data-i18n="nav_services">Services</a>
+                <a href="#philosophy" data-i18n="nav_philosophy">Our Philosophy</a>
+                <a href="#contact" data-i18n="nav_contact">Contact Us</a>
+                <span id="nav-confirm-link" class="hidden text-gold" data-i18n="nav_confirm">Confirm & Pay</span>
+                <div class="lang-toggle">
+                    <button id="lang-en" class="active">EN</button>
+                    <span>/</span>
+                    <button id="lang-zh">中</button>
+                </div>
+                <button class="btn-primary" id="nav-book-btn" data-i18n="nav_book">Book Now</button>
+                <a href="admin.html" class="admin-link-btn" id="open-admin-btn">
+                    <img src="https://img.icons8.com/ios/24/966B26/admin-settings-male.png" alt="Admin">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app-content">
+        <!-- Home Section -->
+        <section id="home" class="hero section">
+            <div class="hero-image-bg"></div>
+            <div class="container hero-content animate-fade-in">
+                <div class="hero-tag" data-i18n="hero_tag">HOLISTIC RESTORATION</div>
+                <h2 class="reveal reveal-up" data-i18n="hero_title">Feel Better, Live Better.</h2>
+                <p class="reveal reveal-up" style="transition-delay: 0.2s;" data-i18n="hero_subtitle">Experience a refined fusion of ancient eastern wisdom and modern western techniques. Your sanctuary for physical relief and mental clarity starts here.</p>
+                <div class="hero-btns reveal reveal-up" style="transition-delay: 0.4s;">
+                    <button class="btn-primary book-trigger" data-i18n="hero_cta">Explore Therapies</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="philosophy section">
+            <div class="container">
+                <div class="philosophy-layout">
+                    <div class="philosophy-main-img reveal reveal-left">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200" alt="Healing hands">
+                        <div class="philosophy-quote-box">
+                            <p data-i18n="philosophy_quote">"True wellness is the harmony of body and spirit."</p>
+                        </div>
+                    </div>
+                    <div class="philosophy-content reveal reveal-right">
+                        <h2 data-i18n="philosophy_title">A Modern Approach to Ancient Healing</h2>
+                        <p class="philosophy-lead" data-i18n="philosophy_subtitle">At ChenFusion, we believe that massage is more than a luxury—it's a fundamental pillar of health.</p>
+                        <div class="philosophy-points">
+                            <div class="point">
+                                <div class="point-icon"><img src="https://img.icons8.com/ios/30/B38B3F/guarantee.png"></div>
+                                <div class="point-text">
+                                    <h4 data-i18n="philosophy_point1">Licensed RMT Expertise</h4>
+                                    <p data-i18n="philosophy_point1_desc">Every session is conducted by a certified professional dedicated to your long-term wellness.</p>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <div class="point-icon"><img src="https://img.icons8.com/ios/30/B38B3F/spa.png"></div>
+                                <div class="point-text">
+                                    <h4 data-i18n="philosophy_point2">Bespoke Treatment Plans</h4>
+                                    <p data-i18n="philosophy_point2_desc">We don't believe in one-size-fits-all. We adapt every movement to your body's specific needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section bg-soft">
+            <div class="container">
+                <div class="section-header reveal reveal-up">
+                    <h2 data-i18n="services_title">Curated Therapies</h2>
+                    <p data-i18n="services_subtitle">Select a path toward restoration. Each therapy is designed to target different levels of physical and mental stress.</p>
+                </div>
+                <div id="services-grid" class="services-grid reveal-stagger">
+                    <!-- Services injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Hours of Operation Section -->
+        <section id="hours" class="hours-section section reveal reveal-up">
+            <div class="container mini-container">
+                <div class="hours-box">
+                    <div class="hours-divider-gold"></div>
+                    <h2 class="hours-title" data-i18n="hours_title">Hours of Operation</h2>
+                    <div class="hours-divider-gold"></div>
+                    
+                    <ul class="hours-list">
+                        <li><span data-i18n="day_mon">MONDAY</span> <span class="dot"></span> <span data-i18n="hours_weekday">9:00 AM - 5:00 PM</span></li>
+                        <li><span data-i18n="day_tue">TUESDAY</span> <span class="dot"></span> <span data-i18n="hours_weekday">9:00 AM - 5:00 PM</span></li>
+                        <li><span data-i18n="day_wed">WEDNESDAY</span> <span class="dot"></span> <span data-i18n="hours_weekday">9:00 AM - 5:00 PM</span></li>
+                        <li><span data-i18n="day_thu">THURSDAY</span> <span class="dot"></span> <span data-i18n="hours_weekday">9:00 AM - 5:00 PM</span></li>
+                        <li><span data-i18n="day_fri">FRIDAY</span> <span class="dot"></span> <span data-i18n="hours_weekday">9:00 AM - 5:00 PM</span></li>
+                        <li><span data-i18n="day_sat">SATURDAY</span> <span class="dot"></span> <span data-i18n="hours_sat">9:00 AM - 1:00 PM</span></li>
+                        <li><span class="closed-day" data-i18n="day_sun">SUNDAY</span> <span class="dot"></span> <span class="closed-day" data-i18n="closed">CLOSED</span></li>
+                    </ul>
+                    
+                    <div class="hours-divider-gold"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Staff Section -->
+        <section id="contact" class="contact-page section">
+            <div class="container">
+                <div class="section-header reveal reveal-up">
+                    <h2 data-i18n="contact_header">Connect with Us</h2>
+                    <p data-i18n="contact_subtitle">Visit our sanctuary in the heart of the city or reach out to us directly to begin your journey.</p>
+                </div>
+
+                <!-- Staff Bios from Images -->
+                <div class="staff-bios-grid reveal-stagger">
+                    <div class="staff-bio-card card">
+                        <div class="staff-img-wrapper">
+                            <img src="/images/lin-chen.png" alt="Lin Chen">
+                        </div>
+                        <div class="staff-details">
+                            <h3 data-i18n="lin_bio_title">Lin Chen, RMT</h3>
+                            <p data-i18n="lin_bio_text">Lin holds a Master's degree in Biophysics and specializes in a variety of therapeutic modalities.</p>
+                        </div>
+                    </div>
+                    <div class="staff-bio-card card">
+                        <div class="staff-img-wrapper">
+                            <img src="/images/jennifer.png" alt="Jennifer">
+                        </div>
+                        <div class="staff-details">
+                            <h3 data-i18n="jennifer_bio_title">Jennifer, RMT</h3>
+                            <p data-i18n="jennifer_bio_text">Jennifer is a Trios program honors graduate with extensive healthcare experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-main-grid reveal reveal-up">
+                    <div class="contact-info-panel">
+                        <div class="info-item">
+                            <img src="https://img.icons8.com/ios/40/B38B3F/marker.png" alt="Map">
+                            <div>
+                                <h4 data-i18n="location_title">Location</h4>
+                                <p>123 Tranquility Lane, Suite 400, Wellness District, Toronto</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <img src="https://img.icons8.com/ios/40/B38B3F/phone.png" alt="Phone">
+                            <div>
+                                <h4 data-i18n="phone_label">Phone</h4>
+                                <p>+1 (555) 234-8900</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <img src="https://img.icons8.com/ios/40/B38B3F/mail.png" alt="Email">
+                            <div>
+                                <h4 data-i18n="email_label">Email</h4>
+                                <p>hello@chenfusion.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-panel">
+                        <h3 data-i18n="send_message">Send a Message</h3>
+                        <form id="contact-us-form">
+                            <div class="form-group">
+                                <label data-i18n="name_label">Name</label>
+                                <input type="text" required placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="email_label">Email</label>
+                                <input type="email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="message_label">Message</label>
+                                <textarea rows="5" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button class="btn-primary" type="submit" data-i18n="submit_btn">Submit Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="cta-section bg-soft">
+            <div class="container">
+                <div class="cta-card">
+                    <h2 data-i18n="cta_ready">Ready to Start Your Journey?</h2>
+                    <p data-i18n="cta_desc">Take the first step toward a balanced, pain-free life. Our practitioners are ready to welcome you to our quiet sanctuary.</p>
+                    <div class="hero-btns">
+                        <button class="btn-primary book-trigger" data-i18n="nav_book">Book Your Appointment</button>
+                        <button class="btn-outline" data-i18n="cta_btn_call">Call Us Directly</button>
+                    </div>
+                    <p class="cta-hours" data-i18n="cta_hours_info">OPEN 7 DAYS A WEEK • 9:00 AM — 9:00 PM</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content full-flow">
+            <button class="close-modal">&times;</button>
+            <div class="booking-layout">
+                <div class="booking-main">
+                    <div class="booking-steps">
+                        <div class="step active" data-step="1">
+                            <span class="step-num">1</span>
+                            <span class="step-label" data-i18n="nav_services">Service</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="2">
+                            <span class="step-num">2</span>
+                            <span class="step-label" data-i18n="step_time">Time</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="3">
+                            <span class="step-num">3</span>
+                            <span class="step-label" data-i18n="book_step2">Schedule</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="4">
+                            <span class="step-num">4</span>
+                            <span class="step-label" data-i18n="book_step3">Information</span>
+                        </div>
+                    </div>
+                    
+                    <div id="booking-panels">
+                        <div class="panel active" id="panel-1">
+                            <div class="panel-header">
+                                <h3 data-i18n="book_subtitle1">Select Your Treatment</h3>
+                                <p data-i18n="book_desc1">Choose the modality that best aligns with your restoration goals.</p>
+                            </div>
+                            <div id="booking-service-list" class="booking-grid"></div>
+                        </div>
+
+                        <!-- Duration Selection -->
+                        <div class="panel" id="panel-2">
+                            <div class="panel-header">
+                                <h3 data-i18n="duration_title">Select Duration</h3>
+                                <p data-i18n="duration_subtitle">Choose the length of your restorative session.</p>
+                            </div>
+                            <div class="duration-grid">
+                                <div class="duration-item" data-mins="15" data-price="50">
+                                    <span data-i18n="duration_15">15 Minutes Session</span>
+                                    <span class="price">$50</span>
+                                </div>
+                                <div class="duration-item" data-mins="30" data-price="80">
+                                    <span data-i18n="duration_30">30 Minutes Session</span>
+                                    <span class="price">$80</span>
+                                </div>
+                                <div class="duration-item" data-mins="45" data-price="100">
+                                    <span data-i18n="duration_45">45 Minutes Session</span>
+                                    <span class="price">$100</span>
+                                </div>
+                                <div class="duration-item popular" data-mins="60" data-price="120">
+                                    <span class="popular-badge" data-i18n="most_popular">MOST POPULAR</span>
+                                    <span data-i18n="duration_60">60 Minutes Session</span>
+                                    <span class="price">$120</span>
+                                </div>
+                                <div class="duration-item" data-mins="75" data-price="150">
+                                    <span data-i18n="duration_75">75 Minutes Session</span>
+                                    <span class="price">$150</span>
+                                </div>
+                                <div class="duration-item" data-mins="90" data-price="180">
+                                    <span data-i18n="duration_90">90 Minutes Session</span>
+                                    <span class="price">$180</span>
+                                </div>
+                                <div class="duration-item" data-mins="120" data-price="230">
+                                    <span data-i18n="duration_120">120 Minutes Session</span>
+                                    <span class="price">$230</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel" id="panel-3">
+                            <div class="panel-header">
+                                <h3 data-i18n="book_subtitle2">Choose Date & Time</h3>
+                                <p data-i18n="book_desc2">Find a moment of peace that fits your schedule.</p>
+                            </div>
+                            <div class="calendar-and-slots">
+                                <div class="calendar-card">
+                                    <div id="calendar-header">
+                                        <button id="prev-month">&lt;</button>
+                                        <h4 id="current-month-year"></h4>
+                                        <button id="next-month">&gt;</button>
+                                    </div>
+                                    <div id="calendar-grid"></div>
+                                </div>
+                                <div class="slots-card">
+                                    <p class="slots-title"><img src="https://img.icons8.com/ios/16/966B26/calendar.png"> <span data-i18n="live_schedule">Available for</span> <span id="selected-date-display">...</span></p>
+                                    <div id="time-slots-grid"></div>
+                                    <p class="timezone-note" data-i18n="timezone_note">* All sessions are scheduled in local studio time (EST).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel" id="panel-4">
+                            <div class="panel-header">
+                                <h3 data-i18n="book_step3">Your Information</h3>
+                                <p data-i18n="book_subtitle3">We just need a few details to finalize your booking.</p>
+                            </div>
+                            <form id="booking-form" class="info-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label data-i18n="name_label">Full Name</label>
+                                        <input type="text" id="full-name" required placeholder="Jane Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label data-i18n="email_label">Email Address</label>
+                                        <input type="email" id="email" required placeholder="jane@example.com">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label data-i18n="phone_label">Phone Number</label>
+                                    <input type="tel" id="phone" required placeholder="+1 (555) 000-0000">
+                                </div>
+                                <div class="form-group">
+                                    <label data-i18n="placeholder_notes">Special Requests</label>
+                                    <textarea id="notes" placeholder="Any specific focus areas?"></textarea>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="panel" id="panel-5">
+                            <h2 data-i18n="book_step4">Finalize Your Restoration</h2>
+                            <div class="payment-layout">
+                                <div class="payment-details-card">
+                                    <div class="card-header">
+                                        <h3 data-i18n="payment_details">Payment Details</h3>
+                                        <span class="ssl-tag"><img src="https://img.icons8.com/ios/16/966B26/lock.png"> <span data-i18n="ssl_secure">SSL SECURE</span></span>
+                                    </div>
+                                    <div class="payment-form">
+                                        <div class="form-group">
+                                            <label data-i18n="cardholder_name">Cardholder Name</label>
+                                            <input type="text" placeholder="As it appears on card">
+                                        </div>
+                                        <div class="form-group">
+                                            <label data-i18n="card_number">Card Number</label>
+                                            <div class="input-with-icon">
+                                                <input type="text" placeholder="0000 0000 0000 0000">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label data-i18n="expiry_date">Expiry Date</label>
+                                                <input type="text" placeholder="MM / YY">
+                                            </div>
+                                            <div class="form-group">
+                                                <label data-i18n="cvc">CVC</label>
+                                                <input type="text" placeholder="123">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="sidebar-divider"></div>
+                                    <div id="final-summary-card"></div>
+                                    
+                                    <button class="btn-primary confirm-btn" id="confirm-booking" style="margin-top: 3rem; width: 100%;">
+                                        <span data-i18n="btn_confirm_pay">Confirm & Pay</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-sidebar" id="booking-sidebar-step">
+                    <div class="sidebar-card">
+                        <h4 data-i18n="booking_summary">Booking Summary</h4>
+                        <div id="sidebar-summary-content">
+                            <p class="empty-msg" data-i18n="empty_summary">Please select a service to begin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Standalone Admin page linked via button above -->
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <div class="logo">
+                    <img src="/images/logo.svg" alt="ChenFusion Logo" style="width: 40px;">
+                    <h2 class="logo-text">ChenFusion</h2>
+                </div>
+                <p data-i18n="footer_text">A restorative sanctuary dedicated to the art of healing touch.</p>
+                <div class="social-icons">
+                    <img src="https://img.icons8.com/ios/24/966B26/share.png">
+                    <img src="https://img.icons8.com/ios/24/966B26/marker.png">
+                    <img src="https://img.icons8.com/ios/24/966B26/mail.png">
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h4 data-i18n="quick_links">Quick Links</h4>
+                <a href="#services" data-i18n="nav_services">Services</a>
+                <a href="#philosophy" data-i18n="nav_philosophy">Our Philosophy</a>
+                <a href="#contact" data-i18n="nav_contact">Contact Us</a>
+            </div>
+            <div class="footer-location">
+                <h4 data-i18n="location_title">Location</h4>
+                <p data-i18n="address_text">123 Tranquility Lane, Toronto</p>
+                <button class="btn-outline-sm" data-i18n="virtual_tour">Virtual Tour</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p data-i18n="copyright">&copy; 2026 ChenFusion Massage Therapy. All Rights Reserved. Licensed RMT.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
